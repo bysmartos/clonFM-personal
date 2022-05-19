@@ -1,0 +1,268 @@
+/* Colores:
+   --color-primary:  #222
+   --color-secondary: rgba(110, 69, 51, 1);
+   --color-focus-menu: #B90000;
+   --color-background: #fff;
+   --color-list-odd: #f2f2f2;
+
+*/
+
+/* Imágenes:
+logo: https://www.last.fm/static/images/logo_static_mob.0798d7258e3d.png
+rock: https://lastfm.freetls.fastly.net/i/u/avatar300s/366962d5733a4aee8bee4a136c239d47.jpg
+hip-hop: https://lastfm.freetls.fastly.net/i/u/avatar300s/51810a59cb17449bb2d6b8b62d63ce78.jpg
+indie:https://lastfm.freetls.fastly.net/i/u/avatar300s/c825233e09af4641a5ce7b6ece883aae.jpg
+jazz:https://lastfm.freetls.fastly.net/i/u/avatar300s/c0a9af93c8c843afb43cd6dc24b0bbf3.jpg
+reggae: https://lastfm.freetls.fastly.net/i/u/avatar300s/94428d295a60403e9327cbfb86e2fbf6.jpg
+*/
+
+/* Filtros:
+
+rock:   sepia(90%);
+hip-hop:contrast(200%);
+indie:  grayscale(50%);
+jazz:   hue-rotate(90deg);
+reggae: saturate(10%);
+
+*/
+
+/* Fuente:
+    font-family:Open Sans,Lucida Grande,Helvetica Neue,Helvetica,Arial,Sans-serif;
+
+*/
+ 
+/* Utiliza  la propiedad counter-increment: step-counter; para pintar el número de la canción
+ */
+
+/*reset*/
+ ul {
+	list-style: none;
+}
+a {
+    all: unset;
+}
+
+/* layout*/
+body {
+    background-color:#f4debe;
+    font-family: Open Sans,Lucida Grande,Helvetica Neue,Helvetica,Arial,Sans-serif;
+}
+
+/*header*/
+header {
+    background-color: #847b45 ;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+header>img {
+    height: 2.2rem;
+    margin-bottom: 0.6rem;
+}
+
+/* nav de los tipos de musica con imagenes*/
+.navMusicStyle {
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin: 2.8rem;
+}
+.navMusicStyle>li{
+    box-sizing:border-box;
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.2rem 1.2rem;
+    font-weight: 600;
+}
+
+.rock{
+    background-image: url("rock.jpg") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: drop-shadow(5px 5px 10px #B90000 ) ;
+    box-shadow: 0px 0px 10px 10px rgba (255,210,82,1);
+    transform: scale (4);
+    text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+    
+}
+
+.hip-hop{
+    background-image: url( "hiphop.jpg") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: drop-shadow(5px 5px 10px #B90000);
+    text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+}
+
+
+  
+.indie{
+    background-image: url("indie.jpg") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: drop-shadow(5px 5px 10px #B90000) ;
+    text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+   
+    
+}
+
+.jazz{
+    background-image: url("jazz.jpg") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: drop-shadow(5px 5px 10px #B90000) ;
+    text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+}
+
+.reggae{
+    background-image: url("https://lastfm.freetls.fastly.net/i/u/avatar300s/94428d295a60403e9327cbfb86e2fbf6.jpg") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: drop-shadow(5px 5px 10px #B90000) ;
+    text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+}
+
+
+
+/*nav de las tres opciones de lista: overview, top 10, the biggest*/
+
+.navListas {
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.navListas>li{
+    padding: 0.2rem 1rem; 
+}
+ 
+
+/*section de las canciones */
+.songsContainer>h2 {
+padding-left: 4.2rem;
+}
+
+.songs>li{
+    height: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+
+} 
+
+.songs>li>img {
+    width: 1.8rem;
+    background-color: transparent;
+    border-radius: rem;
+    margin-left: 1rem;
+    
+}
+
+
+ .songs {
+    counter-reset: li;
+    list-style: none;
+} 
+
+.songs > li> .songArtist:before {
+    counter-increment: li;
+    content: counter(li)". ";
+}
+
+ .songBold{
+    font-weight: bold;
+    width: 60%;     
+}
+
+.songArtist{
+    text-align:start;
+    width: 20%;
+    
+}
+
+ol> :nth-child(odd){
+    background-color: #c2b28f;
+} 
+
+
+li :nth-child(odd){
+    background-color: transparent;
+} 
+
+
+
+.navMusicStyle>li{
+  text-align:center;
+  display:inline-block;
+  list-style:none;
+  position:relative;
+ 
+  
+  box-shadow:0 0 15px 0px #555;
+  transition:all 1s ease;
+  -o-transition:all 1s ease;
+  -moz-transition:all 1s ease;
+  -webkit-transition:all 1s ease;
+  
+
+
+}
+
+
+.navMusicStyle>li:hover{
+  top:0px;
+  opacity:0.5;
+}
+
+.navMusicStyle>li:nth-child(1){
+    transform:rotate(10deg);
+}
+
+.navMusicStyle>li:nth-child(2){
+    transform:rotate(10deg);
+}
+
+.navMusicStyle>li:nth-child(3){
+    transform:rotate(10deg);
+}
+
+.navMusicStyle>li:nth-child(4){
+    transform:rotate(10deg);
+}
+
+.navMusicStyle>li:nth-child(5){
+    transform:rotate(10deg);
+}
+
+.navMusicStyle>ul>li>p{
+  margin:-15px 0 0 0;
+}
+
+
+
+.light{
+  border-radius:50%;
+  position:absolute;
+  left:0;
+  right:0;
+  width:700px;
+  height:700px;
+  background:#fff;
+  filter:blur(100px);
+  opacity:0.3;
+  pointer-events:none;
+}
+
+
+

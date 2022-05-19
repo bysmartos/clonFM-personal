@@ -1,0 +1,27 @@
+{
+  "name": "clon-lastfm",
+  "version": "1.0.0",
+  "description": "Generaremos un fake de la web  **[last.fm](https://www.last.fm/home)**, web de playlists de canciones. El resultado se deberá parecer al que se muestra a continuación:",
+  "main": "script.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bysmartos/clon-lastfm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/bysmartos/clon-lastfm/issues"
+  },
+  "homepage": "https://github.com/bysmartos/clon-lastfm#readme",
+  "devDependencies": {
+    "jest": "^28.1.0"
+  },
+  "dependencies": {
+    "node-fetch": "^3.2.4"
+  }
+}
