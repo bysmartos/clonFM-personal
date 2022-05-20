@@ -1,33 +1,4 @@
-
-
-/* Imágenes:
-logo: https://www.last.fm/static/images/logo_static_mob.0798d7258e3d.png
-rock: https://lastfm.freetls.fastly.net/i/u/avatar300s/366962d5733a4aee8bee4a136c239d47.jpg
-hip-hop: https://lastfm.freetls.fastly.net/i/u/avatar300s/51810a59cb17449bb2d6b8b62d63ce78.jpg
-indie:https://lastfm.freetls.fastly.net/i/u/avatar300s/c825233e09af4641a5ce7b6ece883aae.jpg
-jazz:https://lastfm.freetls.fastly.net/i/u/avatar300s/c0a9af93c8c843afb43cd6dc24b0bbf3.jpg
-reggae: https://lastfm.freetls.fastly.net/i/u/avatar300s/94428d295a60403e9327cbfb86e2fbf6.jpg
-*/
-
-/* Filtros:
-
-rock:   sepia(90%);
-hip-hop:contrast(200%);
-indie:  grayscale(50%);
-jazz:   hue-rotate(90deg);
-reggae: saturate(10%);
-
-*/
-
-/* Fuente:
-    font-family:Open Sans,Lucida Grande,Helvetica Neue,Helvetica,Arial,Sans-serif;
-
-*/
- 
-/* Utiliza  la propiedad counter-increment: step-counter; para pintar el número de la canción
- */
-
-/*reset*/
+  /*reset*/
  ul {
 	list-style: none;
 }
@@ -67,18 +38,19 @@ header>img {
 /* nav de los tipos de musica con imagenes*/
 .navMusicStyle {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     color: white;
     margin: 2.8rem;
 }
 .navMusicStyle>li{
     box-sizing:border-box;
-    width: 6rem;
-    height: 6rem;
+    width: 12rem;
+    height: 12rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0.2rem 1.2rem;
+    margin: 1.2rem 1.2rem;
     font-weight: 600;
 }
 a:hover{
@@ -87,7 +59,8 @@ a:hover{
 .navMusicStyle>li>p{
    border-radius:100%;
    color: #fff703;
-   margin-top: 5.2rem;
+   margin-top: 10.2rem;
+   font-size: 3rem;
 }
 .rock{
     background-image: url("rock.jpg") ;
@@ -145,33 +118,85 @@ a:hover{
     text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
     border-radius: 100%;
 }
-
-
+.navMusicStyle>li:hover{
+    top:0px;
+    opacity:0.5;
+  }
+  
+  .navMusicStyle>li:nth-child(1){
+      transform:rotate(10deg);
+  }
+  
+  .navMusicStyle>li:nth-child(2){
+      transform:rotate(10deg);
+  }
+  
+  .navMusicStyle>li:nth-child(3){
+      transform:rotate(10deg);
+  }
+  
+  .navMusicStyle>li:nth-child(4){
+      transform:rotate(10deg);
+  }
+  
+  .navMusicStyle>li:nth-child(5){
+      transform:rotate(10deg);
+  }
+  
+  .navMusicStyle>ul>li>p{
+    margin:-15px 0 0 0;
+  }
+  
+  .navMusicStyle>li{
+    text-align:center;
+    display:inline-block;
+    list-style:none;
+    position:relative;
+    box-shadow:0 0 15px 0px #555;
+    transition:all 1s ease;
+    -o-transition:all 1s ease;
+    -moz-transition:all 1s ease;
+    -webkit-transition:all 1s ease;
+    
+  
+  
+  }
+  
 
 
 /*nav de las tres opciones de lista: overview, top 10, the biggest*/
 
 .navListas {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     font-weight: 600;
     background-color: #2ec4b6;
-    border-radius: 10rem;
-    height: 4rem;
-    margin-left: 14rem;
-    margin-right:14rem;
+    border-radius: 100rem;
     color: #FFF703;
 }
 
+.contenedorListas {
+   display: flex;
+   justify-content: center;
+}
 .navListas>li{
     padding: 0.2rem 1rem; 
 }
+
+.sombra{
+    color: #cc00ff;
+    font-size: 2.8rem;
+}
+
+.sombranormal {
+    color: #FFF703
+}
+
  
 
 /*section de las canciones */
 .songsContainer>h2 {
-padding-left: 4.2rem;
 text-align: center;
 font-size: 2.6rem;
 }
@@ -186,16 +211,13 @@ color:#cc00ff;
     display: flex;
     align-items: center;
     justify-content: space-between;
-   
-
 } 
 
 .songs>li>img {
     width: 1.8rem;
     background-color: transparent;
     border-radius: rem;
-    margin-left: 1rem;
-    
+    margin-left: 1rem; 
 }
 
 
@@ -231,72 +253,5 @@ li :nth-child(odd){
 
 
 
-.navMusicStyle>li{
-  text-align:center;
-  display:inline-block;
-  list-style:none;
-  position:relative;
- 
-  
-  box-shadow:0 0 15px 0px #555;
-  transition:all 1s ease;
-  -o-transition:all 1s ease;
-  -moz-transition:all 1s ease;
-  -webkit-transition:all 1s ease;
-  
 
 
-}
-
-
-.navMusicStyle>li:hover{
-  top:0px;
-  opacity:0.5;
-}
-
-.navMusicStyle>li:nth-child(1){
-    transform:rotate(10deg);
-}
-
-.navMusicStyle>li:nth-child(2){
-    transform:rotate(10deg);
-}
-
-.navMusicStyle>li:nth-child(3){
-    transform:rotate(10deg);
-}
-
-.navMusicStyle>li:nth-child(4){
-    transform:rotate(10deg);
-}
-
-.navMusicStyle>li:nth-child(5){
-    transform:rotate(10deg);
-}
-
-.navMusicStyle>ul>li>p{
-  margin:-15px 0 0 0;
-}
-
-
-
-.light{
-  border-radius:50%;
-  position:absolute;
-  left:0;
-  right:0;
-  width:700px;
-  height:700px;
-  background:#fff;
-  filter:blur(100px);
-  opacity:0.3;
-  pointer-events:none;
-}
-.sombra{
-    color: #cc00ff;
-    font-size: 2.8rem;
-}
-
-.sombranormal {
-    color: #FFF703
-}
